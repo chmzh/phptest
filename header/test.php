@@ -5,4 +5,5 @@ $options = array(
         "header" => "User-Agent: Advanced HTTP Magic Client"
     ) );
 $page = file_get_contents($url, false , stream_context_create($options)); 
+header("X-my-header:aaa");
 echo $page;

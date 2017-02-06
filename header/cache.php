@@ -5,7 +5,7 @@ header("Content-type:text/html;charset=utf-8");
 //用Cache-Control告诉浏览器有效期 5秒
 header("Cache-Control:max-age=5");//等同于Cache-Control:public, max-age=5
 $curr_time = date('Y-m-d H:i:s');
-echo '服务器时间:'.$curr_time; 
+echo '服务器时间:'.$curr_time;  
 ?>
 <!DOCTYPE html>
 <html>
