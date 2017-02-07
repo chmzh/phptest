@@ -1,6 +1,6 @@
 <?php
 function httpGet() {
-    $url = 'http://localhost/test/rest/server.php';
+    $url = 'http://test.cmz.com/rest/server.php';
     //$url = 'http://www.baidu.com';
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -11,7 +11,7 @@ function httpGet() {
     curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
     curl_setopt($ch, CURLOPT_TIMEOUT, 120);
     //curl_setopt($ch, CURLOPT_NOPROGRESS, 100);
-    //curl_setopt($ch, CURLOPT_HEADER, "Accept:application/text;version=1.0");
+    //curl_setopt($ch, CURLOPT_HEADER, "Accept:application/json;version=1.0");
     $result = curl_exec($ch);
 
     if (curl_getinfo($ch, CURLINFO_HTTP_CODE) == '200') {

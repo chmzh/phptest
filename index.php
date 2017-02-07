@@ -8,8 +8,8 @@
 // }
 // return;
 
-phpinfo();
-return;
+//phpinfo();
+//return;
 function loader($class)
 {
     $file = $class . '.php';
