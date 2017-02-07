@@ -20,7 +20,8 @@ class SoapClientNew extends SoapClient
       
       //non-wsdl方式调用web service    
       //在non-wsdl方式中option location系必须提供的,而服务端的location是选择性的，可以不提供
-     $soap = new SoapClient(null,array('location'=>"http://localhost/test/soap/Server.php",'uri'=>'abcd','trace'=>true));
+     $soap = new SoapClient(null,array('location'=>"http://test.cmz.com/soap/Server.php",'uri'=>'abcd','trace'=>true));
+     var_dump($soap);
      var_dump($soap->__getFunctions());
      //两种调用方式，直接调用方法，和用__soapCall简接调用
      //$result1 = $soap->getName();
