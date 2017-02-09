@@ -8,7 +8,6 @@
 // }
 // return;
 
-
 phpinfo();
 return;
 function loader($class)
