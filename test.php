@@ -6,6 +6,8 @@ header("location:index.php"); //把浏览器重定向到index.php
 ob_end_flush();               //输出全部内容到浏览器
 */
 
+echo date("Gi");
+
 $a='';
 if(isset($a)){
     echo $a.'a';
