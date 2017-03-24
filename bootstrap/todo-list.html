@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Insert title here</title>
+<link rel="stylesheet prefetch"
+	href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style type="text/css">
+body {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #f0f0ff;
+	font-family: "Poppins", sans-serif;
+}
+
+#container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	width: 500px;
+	background-color: #fafafa;
+	padding: 0px;
+	box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+	margin: 6rem 0;
+	border-radius: 0.75rem;
+}
+
+#footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1.5rem;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	text-transform: uppercase;
+	box-shadow: 0 -10px 10px 0 rgba(1, 1, 1, 0.05);
+}
+
+#footer #taskAdd {
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	width: 3rem;
+	height: 3rem;
+	background: #3b44fb;
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 300;
+	border-radius: 0.75rem;
+	border: 0;
+	outline: 0;
+	will-change: transform;
+}
+
+#footer #taskAdd:hover {
+	background: #050fe5;
+	-webkit-transform: scale(0.95);
+	transform: scale(0.95);
+}
+
+#footer #taskAdd:active {
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+#footer input#taskInput {
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	background: transparent;
+	width: calc(100% - 3rem - 5px);
+	border: none;
+}
+
+#footer input#taskInput:focus {
+	outline: 0;
+	border-color: white;
+	color: #0d0d0d;
+}
+
+#tasks {
+	padding: 1.5rem 2rem;
+}
+
+#tasks #tasksList {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+#tasks #tasksList li {
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+	border-radius: 0.75rem;
+	color: #0d0d0d;
+	padding: 1.25rem;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: .03rem;
+	-webkit-animation: fadeIn .5s linear;
+	animation: fadeIn .5s linear;
+	background-color: #fff;
+	margin-bottom: 5px;
+	position: relative;
+	border-right: 0px solid lightgray;
+	letter-spacing: -.015rem;
+	will-change: transform;
+}
+
+#tasks #tasksList li:hover {
+	border-right: 55px solid red;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+	z-index: 20;
+	box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.2);
+}
+
+#tasks #tasksList li:hover .delete {
+	right: -37px;
+	color: white;
+}
+
+#tasks #tasksList li .delete {
+	-webkit-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+	position: absolute;
+	color: transparent;
+	background: none;
+	border: none;
+	outline: 0;
+	line-height: .85rem;
+	font-size: 1rem;
+}
+
+#tasks #tasksList li .delete:hover {
+	opacity: .75;
+}
+
+#tasks #notification {
+	padding-top: 1rem;
+	text-align: center;
+	color: gray;
+	font-weight: 500;
+	font-size: 1.25rem;
+}
+
+@
+-webkit-keyframes fadeIn { 0% {
+	opacity: 0;
+	margin-top: -50px;
+}
+
+50%
+{
+opacity
+:
+ 
+0;
+}
+100%
+{
+opacity
+:
+ 
+1;
+margin-top
+:
+ 
+0
+px
+;
+
+  
+}
+}
+@
+keyframes fadeIn { 0% {
+	opacity: 0;
+	margin-top: -50px;
+}
+
+50%
+{
+opacity
+:
+ 
+0;
+}
+100%
+{
+opacity
+:
+ 
+1;
+margin-top
+:
+ 
+0
+px
+;
+
+  
+}
+}
+@
+-webkit-keyframes fadeOut { 0% {
+	opacity: 1;
+	margin-top: 0px;
+}
+
+50%
+{
+opacity
+:
+ 
+0;
+}
+100%
+{
+opacity
+:
+ 
+0;
+margin-top
+:
+ 
+-50
+px
+;
+
+  
+}
+}
+@
+keyframes fadeOut { 0% {
+	opacity: 1;
+	margin-top: 0px;
+}
+50%
+{
+opacity
+:
+ 
+0;
+}
+100%
+{
+opacity
+:
+ 
+0;
+margin-top
+:
+ 
+-50
+px
+;
+
+  
+}
+}
+</style>
+
+</head>
+<body>
+	<div id="container">
+		<!--  Tasks List  -->
+		<div id="tasks">
+			<div id="notification">Sorry, your task list is empty.</div>
+			<ul id="tasksList">
+			</ul>
+		</div>
+
+		<div id="footer">
+			<input id="taskInput" type="text" placeholder="Your task" />
+			<button id="taskAdd">+</button>
+		</div>
+	</div>
+
+</body>
+<script src="/bootstrap/4.0.0-alpha.6/js/jquery.slim.min.js"
+	integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+	crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$(function() {
+		//Attaching DOM element to varibles
+		var $tasksList = $("#tasksList");
+		var $taskInput = $("#taskInput");
+		var $notification = $("#notification");
+
+		//Counting amount of items in the list
+		//To display or hide notification
+		var displayNotification = function() {
+			if (!$tasksList.children().length) {
+				//$notification.css("display", "block");
+				$notification.fadeIn("fast");
+			} else {
+				$notification.css("display", "none")
+			}
+		}
+
+		//Attaching event handler to the add button
+		$("#taskAdd").on(
+				"click",
+				function() {
+
+					//Returning false if the input is empty
+					if (!$taskInput.val()) {
+						return false;
+					}
+
+					//Appending li with the input value
+					$tasksList.append("<li>" + $taskInput.val()
+							+ "<button class='delete'>&#10006</button></li>");
+
+					//Cleaning input after add event
+					$taskInput.val("");
+
+					//Display/Hide Notification
+					displayNotification();
+
+					//Attaching even handler to the delete button
+					$(".delete").on("click", function() {
+
+						//Assigning "this" to varible, as it doesn't
+						//work correctly with setTimeout() function
+						var $parent = $(this).parent();
+
+						//Displaying CSS animation
+						$parent.css("animation", "fadeOut .3s linear");
+
+						//Timeout on remove function
+						setTimeout(function() {
+							$parent.remove();
+							displayNotification();
+						}, 295);
+
+					})
+				})
+	});
+</script>
+</html>
