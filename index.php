@@ -7,9 +7,9 @@
 //     $abc[] = $_GET['a'];
 // }
 // return;
-
-phpinfo();
-return;
+/*
+//phpinfo();
+//return;
 function loader($class)
 {
     $file = $class . '.php';
@@ -72,3 +72,4 @@ $aa = new ReflectionClass("A");
 
 echo PHP_SAPI === 'cli'?"cli\n":"no cli\n";
 echo print_r($_SERVER['argv']);
+*/
