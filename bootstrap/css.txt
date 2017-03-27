@@ -1,0 +1,11 @@
+@medis 注意事项
+min-width 顺序由小到大
+@media ( min-width :576px)
+@media ( min-width : 768px)
+@media ( min-width : 992px)
+@media ( min-width : 1200px)
+
+max-width 由大于小
+@media ( max-width :575px)
+@media ( max-width :480px)
+@media ( max-width :320px)

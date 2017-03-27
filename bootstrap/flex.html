@@ -28,8 +28,11 @@
 
 @media ( min-width :576px) {
 	.container {
-		min-width:500px;
+		min-width:560px;
 		flex-wrap: wrap;
+	}
+	.container .item{
+		max-width:150px;
 	}
 }
 
@@ -52,13 +55,37 @@
 	}
 }
 
+
+
 @media ( max-width :480px) {
 	.container {
 		min-width:450px;
 		width: 100%;
 		flex-wrap: wrap;
 	}
+	
+	.container .item{
+		width:150px;
+	}
+	
 }
+
+@media ( max-width :320px) {
+	.container {
+		min-width:300px;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+	
+	.container .item{
+		width:100px;
+	}
+	
+}
+
+
+
+
 /*
 @media ( max-width :575px) {
 	.container {
@@ -89,9 +116,14 @@
 </head>
 <body>
 	<div class="container">
-		<div class="item">abc</div>
+		<div class="item" onclick="alrm()">abc</div>
 		<div class="item">efg</div>
 		<div class="item">hij</div>
 	</div>
 </body>
+<script type="text/javascript">
+function alrm(){
+	alert("test");
+}
+</script>
 </html>
