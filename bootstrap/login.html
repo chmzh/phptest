@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Insert title here</title>
 
-<style type="text/css">
-.container{
-	min-width:305px;
-}
-.row{
-	display:flex;
-	flex-direction:row;
-	margin-top:10px;
-	justify-content:center;
-}
-
-.row-justify-center{
-	justify-content:center;
-}
-
-.row input{
-	width:90%;
-	margin-left:2px;
-	margin-right:2px;
-}
-.row button{
-	width:90%;
-}
-.column{
-	display:flex;
-	flex-direction:column;
-}
-
-@media ( min-width :320px){
-	.container{
-		width:100%;
-	}
-}
-
-@media ( min-width :576px){
-	.container{
-		width:100%;
-	}
-}
-@media ( min-width : 768px){
-	.container{
-		width:100%;
-	}
-}
-@media ( min-width : 992px){
-	.container{
-		width:100%;
-	}
-}
-@media ( min-width : 1200px){
-	.container{
-		width:100%;
-	}
-}
-/*
+    <style type="text/css">
+        .container {
+            min-width: 305px;
+        }
+        
+        .row {
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+            justify-content: center;
+        }
+        
+        .row-justify-center {
+            justify-content: center;
+        }
+        
+        .row input {
+            width: 90%;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+        
+        .row button {
+            width: 90%;
+        }
+        
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media ( min-width :320px) {
+            .container {
+                width: 100%;
+            }
+        }
+        
+        @media ( min-width :576px) {
+            .container {
+                width: 100%;
+            }
+        }
+        
+        @media ( min-width: 768px) {
+            .container {
+                width: 100%;
+            }
+        }
+        
+        @media ( min-width: 992px) {
+            .container {
+                width: 100%;
+            }
+        }
+        
+        @media ( min-width: 1200px) {
+            .container {
+                width: 100%;
+            }
+        }
+        /*
 @media(max-width:480px){
 	.container{
 		width:465px;
@@ -86,26 +93,29 @@
 	
 }
 */
-</style>
-<script src="/bootstrap/4.0.0-alpha.6/js/jquery.slim.min.js"></script>
+
+    </style>
+    <script src="/bootstrap/4.0.0-alpha.6/js/jquery.slim.min.js"></script>
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-<div id="logo" data-userid="123" class="row" draggable="true">登陆LOGO</div>
-<div class="row" dropzone="true">把登陆LOGO拖到这里来</div>
-<div class="row"><span style="width:60px;text-align:right">用户名:</span><input spellcheck="true"></div>
-<div class="row"><span style="width:60px;text-align:right">密码:</span><input></div></div>
-<div class="row"><span style="width:60px"></span><button onclick="submit();return false;">登陆</button></div>
-
+        <div id="logo" data-userid="123" class="row" draggable="true">登陆LOGO</div>
+        <div class="row" dropzone="true">把登陆LOGO拖到这里来</div>
+        <div class="row"><span style="width:60px;text-align:right">用户名:</span><input spellcheck="true"></div>
+        <div class="row"><span style="width:60px;text-align:right">密码:</span><input></div>
+    </div>
+    <div class="row"><span style="width:60px"></span><button onclick="submit();return false;">登陆</button></div>
 </body>
 <script>
-function submit(){
-	var logo=$('#logo');
-	console.log(logo.data('userid'));
-	console.log((typeof logo.data('userid'))=='number');
-}
+    function submit() {
+        var logo = $('#logo');
+        console.log(logo.data('userid'));
+        console.log((typeof logo.data('userid')) == 'number');
+    }
 
 </script>
+
 </html>
