@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/structure/jquery.mobile.grid.css">
+   <link rel="stylesheet" type="text/css" href="../resources/css/structure/jquery.mobile.forms.textinput.css">
+</head>
+
+<body>
+    <div id="userid" >
+        
+        <div class="alert alert-danger" role="alert">
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </div>
+
+    </div>
+    <div data-role="fieldcontain">
+        <label for="telBox">label</label>
+        <input type="tel" name="telBox" id="telBox" value="" />
+    </div>
+
+    <div class="ui-grid-b">
+        <div class="ui-block-a">column1</div>
+        <div class="ui-block-b">column2</div>
+        <div class="ui-block-c">column3</div>
+    </div>
+</body>
+<script src="/bootstrap/4.0.0-alpha.6/js/jquery.slim.min.js"></script>
+<script>
+    var userid = $('#userid');
+    userid.on('click', 'div', function(event) {
+        
+        /* Act on the event */
+        alert(window.applicationCache);
+    });
+</script>
+
+</html>
